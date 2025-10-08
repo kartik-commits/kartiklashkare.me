@@ -18,9 +18,9 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16" aria-label="Hero section">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <motion.div
           className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 dark:opacity-10"
           animate={{
@@ -166,6 +166,9 @@ export function Hero() {
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 1.2 + index * 0.1, type: "spring" }}
+                aria-label={social.label}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <social.icon className="h-5 w-5 text-slate-600 dark:text-slate-400" />
               </motion.a>

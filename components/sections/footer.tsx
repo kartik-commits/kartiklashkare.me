@@ -14,7 +14,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="py-12 bg-slate-900 dark:bg-slate-950 text-white">
+    <footer className="py-12 bg-slate-900 dark:bg-slate-950 text-white" role="contentinfo">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -51,6 +51,9 @@ export function Footer() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
                   viewport={{ once: true }}
+                  aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <social.icon className="h-5 w-5" />
                 </motion.a>
