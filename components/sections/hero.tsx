@@ -139,9 +139,12 @@ export function Hero() {
               size="lg"
               variant="outline"
               className="border-2 border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300"
+              asChild
             >
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume {/* #TODO: Add resume link and functionality */}
+              <a href="#contact" aria-label="View Resume">
+                <Download className="mr-2 h-4 w-4" />
+                View Resume
+              </a>
             </Button>
           </motion.div>
 

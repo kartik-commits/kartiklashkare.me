@@ -23,6 +23,14 @@ export default function Home() {
       enableSystem
       disableTransitionOnChange
     >
+      {/* Skip to main content link for screen readers */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md"
+      >
+        Skip to main content
+      </a>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-950 dark:via-blue-950 dark:to-indigo-950">
         <Header />
         
@@ -31,7 +39,7 @@ export default function Home() {
           style={{ opacity }}
         />
 
-        <main className="relative">
+        <main className="relative" id="main-content">
           <Hero />
           <About />
           <Skills />
