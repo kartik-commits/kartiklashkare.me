@@ -16,6 +16,17 @@
   }
 }
 
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve focus visibility for accessibility */
+*:focus-visible {
+  outline: 2px solid hsl(221.2 83.2% 53.3%);
+  outline-offset: 2px;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

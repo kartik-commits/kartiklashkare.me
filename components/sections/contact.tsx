@@ -34,7 +34,7 @@ export function Contact() {
 
     toast({
       title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      description: "Thank you for reaching out. I&apos;ll get back to you soon.",
     });
 
     setFormData({ name: '', email: '', subject: '', message: '' });
@@ -70,7 +70,7 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white/50 dark:bg-slate-900/50">
+    <section id="contact" className="py-20 bg-white/50 dark:bg-slate-900/50" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -81,6 +81,7 @@ export function Contact() {
         >
           <div className="text-center mb-16">
             <motion.h2
+              id="contact-heading"
               className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -96,7 +97,7 @@ export function Contact() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Let's discuss about my work or if I could anyhow be handy to you or just say Namaste. I'm always excited to talk to like-minded folks.
+              Let&apos;s discuss about my work or if I could anyhow be handy to you or just say Namaste. I&apos;m always excited to talk to like-minded folks.
             </motion.p>
           </div>
 
@@ -110,10 +111,10 @@ export function Contact() {
             >
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">
-                  Let's Connect
+                  Let&apos;s Connect
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
-                  I'm always open to discussing new opportunities, interesting projects, 
+                  I&apos;m always open to discussing new opportunities, interesting projects, 
                   or just having a chat about technology and development. Feel free to reach out!
                 </p>
               </div>
