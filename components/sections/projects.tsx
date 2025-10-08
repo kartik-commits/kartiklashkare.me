@@ -125,6 +125,8 @@ export function Projects() {
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
                     : 'hover:bg-slate-100 dark:hover:bg-slate-800'
                 }`}
+                aria-label={`Filter projects by ${category}`}
+                aria-pressed={activeFilter === category}
               >
                 <Filter className="h-4 w-4 mr-2" />
                 {category}
