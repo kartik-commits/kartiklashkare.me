@@ -19,7 +19,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white/50 dark:bg-slate-900/50">
+    <section id="about" className="py-20 bg-white/50 dark:bg-slate-900/50" aria-labelledby="about-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -30,6 +30,7 @@ export function About() {
         >
           <div className="text-center mb-16">
             <motion.h2
+              id="about-heading"
               className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -61,7 +62,7 @@ export function About() {
               </h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                 My journey into AOSP development started during my computer science studies in Fergusson College in 12th, where I discovered 
-                my passion for creating digital experiences. Over the past four years, I've worked in few open source organisations like Pixel Experience, AncientOS. I have more than 500+ active users using my AOSP solutions.
+                my passion for creating digital experiences. Over the past four years, I&apos;ve worked in few open source organisations like Pixel Experience, AncientOS. I have more than 500+ active users using my AOSP solutions.
               </p>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                 My specializations include Android development (AOSP, Custom ROMs, Linux Kernel), Cloud Computing, AI/ML Solutions, Mechanical Design and Public Relations, Community Outreach, and Digital Media Coordination. 
@@ -69,7 +70,7 @@ export function About() {
                 maintainable code and staying up-to-date with the latest industry trends.
               </p>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                When I'm not coding, you can find me contributing to open-source projects, exploring new technologies, listening music or maybe watching Cricket. I'm always eager to take on new challenges and 
+                When I&apos;m not coding, you can find me contributing to open-source projects, exploring new technologies, listening music or maybe watching Cricket. I&apos;m always eager to take on new challenges and 
                 collaborate with talented folks.
               </p>
             </motion.div>

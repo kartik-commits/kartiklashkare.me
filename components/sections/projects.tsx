@@ -7,6 +7,7 @@ import { ExternalLink, Github, Filter } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 export function Projects() {
   const [ref, inView] = useInView({
@@ -76,7 +77,7 @@ export function Projects() {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20" aria-labelledby="projects-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -87,6 +88,7 @@ export function Projects() {
         >
           <div className="text-center mb-16">
             <motion.h2
+              id="projects-heading"
               className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -150,11 +152,13 @@ export function Projects() {
                   className={project.featured ? 'md:col-span-2 lg:col-span-1' : ''}
                 >
                   <Card className="h-full bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-slate-200/50 dark:border-slate-700/50 hover:shadow-xl transition-all duration-300 overflow-hidden group">
-                    <div className="relative overflow-hidden">
-                      <img
+                    <div className="relative overflow-hidden h-48">
+                      <Image
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

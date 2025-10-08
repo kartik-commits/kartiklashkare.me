@@ -21,7 +21,7 @@ export function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20" aria-labelledby="skills-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -32,6 +32,7 @@ export function Skills() {
         >
           <div className="text-center mb-16">
             <motion.h2
+              id="skills-heading"
               className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}

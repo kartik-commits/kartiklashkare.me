@@ -61,7 +61,7 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white/50 dark:bg-slate-900/50">
+    <section id="experience" className="py-20 bg-white/50 dark:bg-slate-900/50" aria-labelledby="experience-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -72,6 +72,7 @@ export function Experience() {
         >
           <div className="text-center mb-16">
             <motion.h2
+              id="experience-heading"
               className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
