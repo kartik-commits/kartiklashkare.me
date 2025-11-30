@@ -25,12 +25,14 @@ export function Footer() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                Lashkare Kartik
-              </h3>
-              <p className="text-slate-400">
-                An Engineer & Tech Enthusiast
-              </p>
+              <div className="mb-4 md:mb-0">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-gray-400 to-slate-400 bg-clip-text text-transparent">
+                  Lashkare Kartik
+                </h3>
+                <p className="text-sm text-slate-400 mt-2">
+                  Building digital experiences with passion and precision.
+                </p>
+              </div>
             </motion.div>
 
             <motion.div
@@ -76,7 +78,7 @@ export function Footer() {
               >
                 <Heart className="h-4 w-4 text-red-500 fill-current" />
               </motion.span>
-              while listening Country Music 
+              while listening Country Music
             </p>
           </motion.div>
         </div>

@@ -78,7 +78,7 @@ export function Experience() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-gray-800 to-black dark:from-gray-200 dark:to-white bg-clip-text text-transparent">
                 Work Experience
               </span>
             </motion.h2>
@@ -107,7 +107,7 @@ export function Experience() {
                         <CardTitle className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
                           {exp.position}
                         </CardTitle>
-                        <div className="flex items-center gap-2 text-lg font-semibold text-blue-600 dark:text-blue-400 mb-2">
+                        <div className="flex items-center gap-2 text-lg font-semibold text-black dark:text-white mb-2">
                           <Briefcase className="h-4 w-4" />
                           {exp.company}
                         </div>
@@ -131,7 +131,7 @@ export function Experience() {
                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                       {exp.description}
                     </p>
-                    
+
                     <div>
                       <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">
                         Key Achievements:
@@ -145,7 +145,7 @@ export function Experience() {
                             animate={inView ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.5, delay: 0.8 + index * 0.2 + achIndex * 0.1 }}
                           >
-                            <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                            <span className="w-2 h-2 bg-black dark:bg-white rounded-full mt-2 flex-shrink-0" />
                             {achievement}
                           </motion.li>
                         ))}
@@ -164,9 +164,9 @@ export function Experience() {
                             animate={inView ? { opacity: 1, scale: 1 } : {}}
                             transition={{ duration: 0.3, delay: 1 + index * 0.2 + techIndex * 0.05 }}
                           >
-                            <Badge 
+                            <Badge
                               variant="secondary"
-                              className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 border border-blue-200 dark:border-blue-800"
+                              className="bg-gradient-to-r from-gray-100 to-slate-100 dark:from-gray-900 dark:to-slate-900 border border-gray-200 dark:border-gray-800"
                             >
                               {tech}
                             </Badge>

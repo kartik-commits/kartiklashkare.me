@@ -31,7 +31,9 @@ html {
 
 /* Ensure minimum touch target size for mobile accessibility */
 @media (pointer: coarse) {
-  button, a {
+
+  button,
+  a {
     min-height: 44px;
     min-width: 44px;
   }
@@ -39,6 +41,7 @@ html {
 
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -46,7 +49,7 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   html {
     scroll-behavior: auto;
   }
@@ -54,80 +57,92 @@ html {
 
 @layer base {
   :root {
-    /* Material You / Nature inspired light theme */
-    --background: 210 20% 98%; /* Light grey-blue tint */
-    --foreground: 210 10% 10%; /* Soft black */
-    
-    --card: 210 20% 96%; /* Slightly darker than background */
-    --card-foreground: 210 10% 10%;
-    
-    --popover: 210 20% 98%;
-    --popover-foreground: 210 10% 10%;
-    
-    --primary: 215 90% 35%; /* Deep nature blue */
-    --primary-foreground: 210 20% 98%;
-    
-    --secondary: 150 40% 90%; /* Soft mint green */
-    --secondary-foreground: 150 40% 20%;
-    
-    --muted: 210 20% 90%;
-    --muted-foreground: 210 10% 40%;
-    
-    --accent: 215 30% 90%; /* Soft blue accent */
-    --accent-foreground: 215 90% 35%;
-    
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 20% 98%;
+    /* Monochrome / Black theme */
+    --background: 0 0% 100%;
+    /* White */
+    --foreground: 0 0% 0%;
+    /* Black */
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 215 90% 35%;
+    --card: 0 0% 98%;
+    /* Very light gray */
+    --card-foreground: 0 0% 0%;
 
-    --radius: 1.5rem; /* 24px - Material You standard */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
 
-    /* Chart colors - Nature inspired */
-    --chart-1: 215 90% 35%; /* Blue */
-    --chart-2: 150 60% 40%; /* Green */
-    --chart-3: 35 80% 50%;  /* Amber */
-    --chart-4: 280 50% 50%; /* Purple */
-    --chart-5: 10 70% 50%;  /* Terracotta */
+    --primary: 0 0% 0%;
+    /* Black */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 90%;
+    /* Light gray */
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 0% 90%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 0% 40%;
+    /* Dark gray for destructive */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 0 0% 0%;
+
+    --radius: 1.5rem;
+    /* 24px - Material You standard */
+
+    /* Chart colors - Monochrome */
+    --chart-1: 0 0% 20%;
+    --chart-2: 0 0% 40%;
+    --chart-3: 0 0% 60%;
+    --chart-4: 0 0% 80%;
+    --chart-5: 0 0% 90%;
   }
 
   .dark {
-    /* Material You / Nature inspired dark theme */
-    --background: 210 10% 6%; /* Very dark blue-grey */
-    --foreground: 210 20% 90%;
-    
-    --card: 210 10% 10%; /* Slightly lighter */
-    --card-foreground: 210 20% 90%;
-    
-    --popover: 210 10% 8%;
-    --popover-foreground: 210 20% 90%;
-    
-    --primary: 215 80% 70%; /* Lighter blue for dark mode */
-    --primary-foreground: 215 90% 10%;
-    
-    --secondary: 150 30% 20%; /* Dark mint */
-    --secondary-foreground: 150 40% 90%;
-    
-    --muted: 210 10% 15%;
-    --muted-foreground: 210 10% 60%;
-    
-    --accent: 215 20% 15%;
-    --accent-foreground: 210 20% 90%;
-    
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 210 20% 90%;
-    
-    --border: 210 10% 15%;
-    --input: 210 10% 15%;
-    --ring: 215 80% 70%;
-    
-    --chart-1: 215 80% 70%;
-    --chart-2: 150 60% 60%;
-    --chart-3: 35 80% 60%;
-    --chart-4: 280 60% 60%;
-    --chart-5: 10 70% 60%;
+    /* Monochrome / Black theme */
+    --background: 0 0% 0%;
+    /* Black */
+    --foreground: 0 0% 100%;
+    /* White */
+
+    --card: 0 0% 5%;
+    /* Very dark gray */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    /* White */
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 15%;
+    /* Dark gray */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 0% 60%;
+    --destructive-foreground: 0 0% 0%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 100%;
+
+    --chart-1: 0 0% 80%;
+    --chart-2: 0 0% 60%;
+    --chart-3: 0 0% 40%;
+    --chart-4: 0 0% 20%;
+    --chart-5: 0 0% 10%;
   }
 }
 
@@ -135,6 +150,7 @@ html {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

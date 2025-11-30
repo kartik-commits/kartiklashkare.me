@@ -71,9 +71,9 @@ export function Projects() {
   ];
 
   const categories = ['All', 'Website'];
-  
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
+
+  const filteredProjects = activeFilter === 'All'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   return (
@@ -94,7 +94,7 @@ export function Projects() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-gray-800 to-black dark:from-gray-200 dark:to-white bg-clip-text text-transparent">
                 Featured Projects
               </span>
             </motion.h2>
@@ -120,11 +120,10 @@ export function Projects() {
                 key={category}
                 variant={activeFilter === category ? "default" : "outline"}
                 onClick={() => setActiveFilter(category)}
-                className={`transition-all duration-300 ${
-                  activeFilter === category
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                className={`transition-all duration-300 ${activeFilter === category
+                    ? 'bg-gradient-to-r from-gray-800 to-black text-white'
                     : 'hover:bg-slate-100 dark:hover:bg-slate-800'
-                }`}
+                  }`}
                 aria-label={`Filter projects by ${category}`}
                 aria-pressed={activeFilter === category}
               >
@@ -181,24 +180,24 @@ export function Projects() {
                         </Badge>
                       )}
                     </div>
-                    
+
                     <CardHeader>
                       <CardTitle className="text-xl font-bold text-slate-900 dark:text-slate-100">
                         {project.title}
                       </CardTitle>
                     </CardHeader>
-                    
+
                     <CardContent className="space-y-4">
                       <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                         {project.description}
                       </p>
-                      
+
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech) => (
                           <Badge
                             key={tech}
                             variant="secondary"
-                            className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 border border-blue-200 dark:border-blue-800"
+                            className="bg-gradient-to-r from-gray-100 to-slate-100 dark:from-gray-900 dark:to-slate-900 border border-gray-200 dark:border-gray-800"
                           >
                             {tech}
                           </Badge>

@@ -22,7 +22,7 @@ export function Hero() {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <motion.div
-          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 dark:opacity-10"
+          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-gray-400 to-slate-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 dark:opacity-10"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
@@ -34,7 +34,7 @@ export function Hero() {
           }}
         />
         <motion.div
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-pink-400 to-red-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 dark:opacity-10"
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-zinc-400 to-gray-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 dark:opacity-10"
           animate={{
             scale: [1.2, 1, 1.2],
             rotate: [360, 180, 0],
@@ -58,7 +58,7 @@ export function Hero() {
           >
             <div className="relative inline-block">
               <motion.div
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1 mx-auto"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-gray-500 to-slate-600 p-1 mx-auto"
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -67,7 +67,7 @@ export function Hero() {
                 </div>
               </motion.div>
               <motion.div
-                className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-slate-900"
+                className="absolute -bottom-2 -right-2 w-8 h-8 bg-black dark:bg-white rounded-full border-4 border-white dark:border-slate-900"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.8, type: "spring" }}
@@ -82,7 +82,7 @@ export function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-purple-800 dark:from-slate-100 dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-slate-900 via-gray-800 to-zinc-800 dark:from-slate-100 dark:via-gray-200 dark:to-zinc-200 bg-clip-text text-transparent">
               LASHKARE KARTIK
             </span>
           </motion.h1>
@@ -128,13 +128,13 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-black text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Mail className="mr-2 h-4 w-4" />
               Get In Touch
             </Button>
-            
+
             <Button
               size="lg"
               variant="outline"

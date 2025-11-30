@@ -26,16 +26,16 @@ export default function Home() {
       {/* Skip to main content link for screen readers */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-black focus:text-white focus:rounded-md"
       >
         Skip to main content
       </a>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-950 dark:via-blue-950 dark:to-indigo-950">
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-100 dark:from-black dark:via-zinc-950 dark:to-slate-950">
         <Header />
-        
+
         <motion.div
-          className="fixed inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 pointer-events-none"
+          className="fixed inset-0 bg-gradient-to-r from-gray-600/10 via-slate-600/10 to-zinc-600/10 pointer-events-none"
           style={{ opacity }}
         />
 

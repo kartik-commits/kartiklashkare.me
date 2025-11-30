@@ -28,7 +28,7 @@ export function TypeWriter({
 
   useEffect(() => {
     const currentWord = words[currentWordIndex];
-    
+
     if (isWaiting) {
       const waitTimer = setTimeout(() => {
         setIsWaiting(false);
@@ -51,7 +51,7 @@ export function TypeWriter({
           setCurrentText(currentText.slice(0, -1));
         } else {
           setIsDeleting(false);
-          setCurrentWordIndex((prev) => 
+          setCurrentWordIndex((prev) =>
             loop ? (prev + 1) % words.length : Math.min(prev + 1, words.length - 1)
           );
         }
@@ -65,7 +65,7 @@ export function TypeWriter({
     <span className="inline-block">
       {currentText}
       {cursor && (
-        <span className="animate-pulse ml-1 text-blue-600 dark:text-blue-400">
+        <span className="animate-pulse ml-1 text-black dark:text-white">
           {cursorStyle}
         </span>
       )}

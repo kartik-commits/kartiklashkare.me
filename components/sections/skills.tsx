@@ -13,7 +13,7 @@ export function Skills() {
   });
 
   const technologies = [
-    'Android development', 'AI/ML', 'Data Visualization', 'Cloud Computing', 
+    'Android development', 'AI/ML', 'Data Visualization', 'Cloud Computing',
     'C++', 'Python', 'asm', 'Visual Basics', 'Bash', 'nano',
     'HTML', 'CSS', 'NextJS', 'Vercel', 'Git', 'Github', 'GitHub Actions', 'Figma', 'Linux', 'Linux Kernel',
     'CATIA', 'Ansys Workbench',
@@ -38,7 +38,7 @@ export function Skills() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-gray-800 to-black dark:from-gray-200 dark:to-white bg-clip-text text-transparent">
                 Skills & Expertise
               </span>
             </motion.h2>
@@ -71,9 +71,9 @@ export function Skills() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Badge 
-                    variant="secondary" 
-                    className="px-4 py-2 text-sm bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 border border-blue-200 dark:border-blue-800 hover:shadow-md transition-all duration-300"
+                  <Badge
+                    variant="secondary"
+                    className="px-4 py-2 text-sm bg-gradient-to-r from-gray-100 to-slate-100 dark:from-gray-900 dark:to-slate-900 border border-gray-200 dark:border-gray-800 hover:shadow-md transition-all duration-300"
                   >
                     {tech}
                   </Badge>

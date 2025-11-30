@@ -87,7 +87,7 @@ export function Contact() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-gray-800 to-black dark:from-gray-200 dark:to-white bg-clip-text text-transparent">
                 Get In Touch
               </span>
             </motion.h2>
@@ -114,7 +114,7 @@ export function Contact() {
                   Let&apos;s Connect
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
-                  I&apos;m always open to discussing new opportunities, interesting projects, 
+                  I&apos;m always open to discussing new opportunities, interesting projects,
                   or just having a chat about technology and development. Feel free to reach out!
                 </p>
               </div>
@@ -129,7 +129,7 @@ export function Contact() {
                     transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                     whileHover={{ scale: 1.02 }}
                   >
-                    <div className="p-3 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+                    <div className="p-3 rounded-full bg-gradient-to-br from-gray-800 to-black text-white">
                       <info.icon className="h-5 w-5" />
                     </div>
                     <div>
@@ -138,7 +138,7 @@ export function Contact() {
                       </h4>
                       <a
                         href={info.href}
-                        className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                        className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors duration-200"
                       >
                         {info.value}
                       </a>
@@ -228,7 +228,7 @@ export function Contact() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="w-full bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-black text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300"
                       size="lg"
                     >
                       {isSubmitting ? (

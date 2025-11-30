@@ -15,23 +15,22 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-950 dark:via-blue-950 dark:to-indigo-950">
-      <div className="max-w-md mx-auto text-center p-8">
-        <div className="mb-6">
-          <div className="text-6xl mb-4">⚠️</div>
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
-            Something went wrong!
-          </h2>
-          <p className="text-slate-600 dark:text-slate-400">
-            We apologize for the inconvenience. Please try again.
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-100 dark:from-black dark:via-zinc-950 dark:to-slate-950">
+      <div className="text-center space-y-6 p-8 rounded-2xl bg-white/50 dark:bg-black/50 backdrop-blur-md border border-gray-200 dark:border-gray-800 shadow-xl max-w-md mx-4">
+        <div className="space-y-2">
+          <h2 className="text-3xl font-bold tracking-tighter">Something went wrong!</h2>
+          <p className="text-muted-foreground">
+            We apologize for the inconvenience. An unexpected error has occurred.
           </p>
         </div>
-        <Button
-          onClick={reset}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-        >
-          Try again
-        </Button>
+        <div className="flex justify-center gap-4">
+          <Button
+            onClick={() => reset()}
+            className="bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-black text-white"
+          >
+            Try again
+          </Button>
+        </div>
       </div>
     </div>
   );

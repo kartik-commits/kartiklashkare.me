@@ -53,7 +53,7 @@ export function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div className="flex items-center justify-between h-16">
           <motion.button
-            className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer"
+            className="font-bold text-xl bg-gradient-to-r from-gray-800 to-black dark:from-white dark:to-slate-200 bg-clip-text text-transparent cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -68,7 +68,7 @@ export function Header() {
               <motion.button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                className="text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition-colors duration-200"
                 whileHover={{ y: -2 }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export function Header() {
                 {item.label}
               </motion.button>
             ))}
-            
+
             <Button
               variant="ghost"
               size="icon"
@@ -102,7 +102,7 @@ export function Header() {
               <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             </Button>
-            
+
             <Button
               variant="ghost"
               size="icon"
@@ -125,12 +125,12 @@ export function Header() {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg rounded-lg mt-2">
+              <div className="px-2 pt-2 pb-3 space-y-1 bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg rounded-lg mt-2 border border-slate-200 dark:border-slate-800">
                 {navItems.map((item) => (
                   <button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left px-3 py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-colors duration-200"
+                    className="block w-full text-left px-3 py-2 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-colors duration-200"
                   >
                     {item.label}
                   </button>
@@ -143,3 +143,4 @@ export function Header() {
     </motion.header>
   );
 }
+

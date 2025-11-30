@@ -36,7 +36,7 @@ export function About() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-gray-800 to-black dark:from-gray-200 dark:to-white bg-clip-text text-transparent">
                 About Me
               </span>
             </motion.h2>
@@ -61,16 +61,16 @@ export function About() {
                 My Journey
               </h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                My journey into AOSP development started during my computer science studies in Fergusson College in 12th, where I discovered 
+                My journey into AOSP development started during my computer science studies in Fergusson College in 12th, where I discovered
                 my passion for creating digital experiences. Over the past four years, I&apos;ve worked in few open source organisations like Pixel Experience, AncientOS. I have more than 500+ active users using my AOSP solutions.
               </p>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                My specializations include Android development (AOSP, Custom ROMs, Linux Kernel), Cloud Computing, AI/ML Solutions, Mechanical Design and Public Relations, Community Outreach, and Digital Media Coordination. 
-                I believe in writing clean, 
+                My specializations include Android development (AOSP, Custom ROMs, Linux Kernel), Cloud Computing, AI/ML Solutions, Mechanical Design and Public Relations, Community Outreach, and Digital Media Coordination.
+                I believe in writing clean,
                 maintainable code and staying up-to-date with the latest industry trends.
               </p>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                When I&apos;m not coding, you can find me contributing to open-source projects, exploring new technologies, listening music or maybe watching Cricket. I&apos;m always eager to take on new challenges and 
+                When I&apos;m not coding, you can find me contributing to open-source projects, exploring new technologies, listening music or maybe watching Cricket. I&apos;m always eager to take on new challenges and
                 collaborate with talented folks.
               </p>
             </motion.div>
@@ -81,8 +81,8 @@ export function About() {
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600 p-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm" />
+              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-800 to-black p-8">
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-800/20 to-black/20 backdrop-blur-sm" />
                 <div className="relative text-white">
                   <h4 className="text-xl font-bold mb-4">What Drives Me</h4>
                   <ul className="space-y-3">
@@ -124,7 +124,7 @@ export function About() {
                 <Card className="text-center p-6 bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-slate-200/50 dark:border-slate-700/50">
                   <CardContent className="p-0">
                     <motion.div
-                      className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-white mb-4"
+                      className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-black text-white mb-4"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
