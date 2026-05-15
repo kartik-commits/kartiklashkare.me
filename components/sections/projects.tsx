@@ -70,7 +70,7 @@ export function Projects() {
     },
   ];
 
-  const categories = ['All', 'Website'];
+  const categories = ['All', ...Array.from(new Set(projects.map((project) => project.category)))];
 
   const filteredProjects = activeFilter === 'All'
     ? projects
