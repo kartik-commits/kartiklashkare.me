@@ -69,6 +69,20 @@ npm run build
 npm start
 ```
 
+### Contact Form Setup (Static Export)
+
+The contact form sends messages to an external endpoint so it works with static deployment.
+
+1. Create `.env.local` in the project root.
+2. Add:
+
+```bash
+NEXT_PUBLIC_CONTACT_ENDPOINT=https://your-form-endpoint
+```
+
+Use a form backend endpoint that accepts JSON POST requests (for example Formspree/Getform/Web3Forms).
+For Vercel, add the same variable in Project Settings → Environment Variables.
+
 ## Technologies Used
 
 - **Framework**: Next.js 15
