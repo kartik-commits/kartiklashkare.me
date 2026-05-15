@@ -65,7 +65,7 @@ export function Contact() {
       icon: MapPin,
       title: 'Location',
       value: 'Pune, Maharashtra',
-      href: '#'
+      href: 'https://maps.google.com/?q=Pune,Maharashtra'
     }
   ];
 
