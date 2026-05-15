@@ -141,7 +141,12 @@ export function Hero() {
               className="border-2 border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300"
               asChild
             >
-              <a href="#contact" aria-label="View Resume">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Resume PDF"
+              >
                 <Download className="mr-2 h-4 w-4" />
                 View Resume
               </a>
